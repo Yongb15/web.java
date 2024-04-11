@@ -1,0 +1,24 @@
+package ex4_Calendar;
+
+import java.util.Calendar;
+
+public class Ex1_Calendar {
+	public static void main(String[] args) {
+		// java.util 패키지에 있는 날짜와 시간 정보를 제공해주는 클래스
+		// 객체를 만들 때 new 키워드를 이용하여 선언하지 않고 생성된 객체를 받아오는 식으로 선언
+		
+		Calendar cal = Calendar.getInstance();
+		
+		// 연도
+		int year = cal.get(cal.YEAR);
+		
+		// 월을 나타내는 상수(0~11)
+		int month = cal.get(cal.MONTH) + 1;
+		
+		// 현재 달의 몇 번째 날인지 나타내는 상수(1~31)
+		int day = cal.get(cal.DAY_OF_MONTH);
+		
+		
+		System.out.println("오늘 날짜는 " + year + "년 " + month + "월 " + day + "일입니다.");
+	}
+}
