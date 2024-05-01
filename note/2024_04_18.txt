@@ -1,0 +1,131 @@
+JFrame 클래스
+- 프레임 객체를 만들 수 있는 클래스
+
+setTitle() : 프레임의 제목
+setBounds(x, y, width, height) : 프레임이 보여질 위치와 크기
+setVisible(boolean b) : 프레임을 보여줄지 정함
+setLocation(x, y) : 좌표
+setSize(width, height) : 크기
+add(component c) : 컴포넌트를 프레임에 붙힘
+
+----------------------------------------------------------
+
+JButton 클래스
+- 버튼 객체를 만들 수 있는 클래스
+
+생성자
+JButton(Icon icon) : 아이콘을 가진 버튼 생성
+JButton(String text) : text를 가진 버튼 생성
+
+메서드
+setBounds(x, y, width, height)
+
+이벤트 처리
+ActionListener 인터페이스에 actionPrtformed() 메서드를 통해 이벤트 구현하기
+
+버튼에 이벤트 붙히기
+addActionListner(ActionListener al);
+
+이벤트 처리와 동시에 붙히기
+addActionListener(new ActionListener() {
+	오버라이딩 하기
+});
+
+------------------------------------------------------
+
+JOptionPane 클래스
+- 사용자에게 값을 묻거나 정보를 알려주는 표준 대화 상자를 쉽게 팝업을 이용해서 띄운다.
+
+showMessageDialog(부모 컴포넌트, 메세지, 제목, 아이콘)
+showConfirmDialog(부모, 메세지, 제목, 아이콘, 옵션)
+showInputDialog(부모, 내용)
+showOption
+
+
+옵션
+DEAFULT_OPTION : 확인 버튼만 잇음
+OK_CANCLE_OPTION : OK, CANCEL 버튼
+YES_NO_OPTION : YES, NO
+YES_NO_CENCEL_OPTION : YES, NO, CANCEL 버튼
+OK -> 0
+YES -> 0
+NO -> 1
+CENCEL -> 2
+
+JPanel 클래스
+프레임과 컴포넌트들의 중간 컨테이너 역할을 함
+
+생성자
+JPanel() 레이아웃이 FlowLayout인 JPanel을 생성
+JPanel(LayoutManager layout) 레이아웃 매니저가 layout인 JPanel을 생성
+
+배치관리자
+FlowLayout : 왼쪽에서 오른쪽으로 배치, 오른쪽에 공간이 없으면 아래로 배치
+BorderLayout : 동, 서, 남, 북 중앙 다섯개의 영역으로 나눔
+GridLayout : 표 묘양으로 n * n 으로 설정해주며 왼쪽에서 오른쪽, 위에서 아래로 배치
+CardLayout : 컴포넌트를 포개어 배치
+Null : 레이아웃을 쓰지 않고 각 컴포넌트마다 수동으로 위치를 설정
+
+JPanel의 주요 매서드
+add(Component c) : 패널에 컴포넌트 추가
+remove(Component c) : 패널에서 컴포넌트 제거
+setLayout(LayoutMAnager layout) : 배치관리자 지정
+setBounds(x, y, width, height) : 패널의 위치와 크기 설정
+setToolTipText(String text) : 패널의 빈곳에 마우스를 올리면 툴팁을 표시
+
+----------------------------------------------
+
+JLabel 클래스
+정보 또는 택스트를 위한 라벨을 생성
+문자열이나 아이콘을 사용하여 객체를 만듬
+
+생성자
+JLable() : text와 이미지를 사용하지 않는 JLabel 생성
+JLable(Icon image) : image를 Icon으로 사용하는 JLabel 생성
+JLable(String text) : text를 사용하는 JLable 생성
+
+JTextField : 한줄의 문자열을 입력할 수 있는 컴포넌트
+
+생성자
+JTextField() : 초기 문자열이 null이고 길이가 0인 텍스트 필드
+JTextField(String text) : 초기 문자열이 text이고 길이가 0인 텍스트 필드
+JTextField(int column) : 초기 문자열이 null일고 길이가 column인 텍스트 필드
+JTextField(String text, int coulmn) : 초기 문자열이 text이고, 길이가 column인 텍스트 필드
+
+메서드
+String getText() : 텍스트 필드에 입력된 문자열을 구함
+void setText() : 지정된 문자열을 텍스트 필드에 씀
+void setEditable(boolean b) : 텍스트 필드에 텍스트를 입력할 수 있는지 없는지 설정
+boolean isEditable() : 텍스트를 입력할 수 있는지 없는지 상태를 반환
+
+JTextArea
+여러 줄을 입력할 수 있는 컴포넌트
+창의 크기보다 많은 문자열을 입력하더라도 자동으로 스크롤바가 생기지 않음
+스크롤바의 기능을 사용하기 위해서는 JScrollPane 클래스를 사용
+
+생성자
+JTextArea()
+JTextArea(String text)
+JTextArea(int row, int columns)
+JTextArea(String text, int rows, int columns)
+
+JPasswordField
+입력받은 글자를 보여주지 않을때 사용
+
+생성자
+JPasswordField()
+JPasswordField(String text)
+JPasswordField(int column)
+JPasswordField(String text, int coulmns)
+
+--------------------------------------------------
+
+JCheckBox
+여러 개를 클릭할 수 있는 체크박스 상자
+
+JRadioButton
+여러 개의 라디오 버튼은 ButtonGroup을 사용하여 하나의 그룹으로 묶을 수 있음
+그룹으로 묶으면 여러 개의 라디오 버튼에서 하나만 선택
+
+
+ 
